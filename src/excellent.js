@@ -497,6 +497,32 @@
          * List of found initialized controllers.
          */
         this.findControllers = findCS.bind(this);
+
+        /**
+         * @method ERoot#findControllers
+         * @description
+         * Adds a new event listener.
+         *
+         * Supported events:
+         *
+         *  - 'init' - application has been initialized;
+         *  - 'newController'
+         *  - 'error'?
+         *  - etc.
+         *
+         * ISSUES: If you have a dynamic controller that needs this,
+         * it will generate memory leaks, so "un-listen" is needed also.
+         *
+         * @param {String} event
+         * Event name.
+         *
+         * @param {Function} cb
+         * Event notification callback.
+         */
+        this.on = function (event, cb) {
+
+        };
+
     }
 
     /**
